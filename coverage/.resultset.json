@@ -1,0 +1,33 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/quinnkrug/turing/1module/week4/battleship/lib/board.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        4,
+        null,
+        null,
+        1,
+        14,
+        4,
+        10,
+        28,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1535836571
+  }
+}
