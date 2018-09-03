@@ -1,5 +1,6 @@
 require 'pry'
 require './lib/ship'
+require './lib/guess'
 
 class Board
 
@@ -20,7 +21,16 @@ class Board
   end
 
   def print_board
-    "Work In Progress"
+    i = 65
+    p "================="
+    p ".| 1 | 2 | 3 | 4"
+    board.each do |row|
+      p"-----------------"
+      p "#{i.chr}| #{row.join(" | ")}"
+      i += 1
+    end
+    p "================="
+
   end
 
   def place_ship(ship)
@@ -30,9 +40,15 @@ class Board
     end
   end
 
+
+
 end
 
 
-# board = Board.new(4)
-# ship = Ship.new(["A1","A2"])
-# ship_2 = Ship.new(["A2","B2","C2","D2"])
+board = Board.new(4)
+ship = Ship.new(["A1","A2"])
+ship_2 = Ship.new(["B2","C2","D2"])
+board.place_ship(ship)
+guess = Guess.new(4)
+
+binding.pry
