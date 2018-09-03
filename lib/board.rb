@@ -4,11 +4,12 @@ require './lib/guess'
 
 class Board
 
-  attr_reader :board, :ships
+  attr_reader :board, :ships, :guess
 
-  def initialize (board_size)
+  def initialize (board_size,guess)
     @board = build_board(board_size)
     @ships = []
+    @guess = guess
   end
 
   def build_board(i)
@@ -40,15 +41,28 @@ class Board
     end
   end
 
+  def record_guess(coordinate)
+    @guess.previous_guesses << coordinate
+    if @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] == "S"
+      p "hit"
+
+      ship_index = @ships.find_index{|ship| ship.coordinates.any?{ |coord| coord == coordinate} == true}
+
+      @ships[ship_index].hit_ship(coordinate)
+
+      @guess.record_hit_or_miss(coordinate,"H")
+    else
+      p "miss"
+
+      @guess.record_hit_or_miss(coordinate,"M")
+    end
+
+  end
+
+  def check_if_all_ships_sank?
+    @ships.all? {|ship| ship.check_if_ship_is_sank? == true }
+  end
+
 
 
 end
-
-
-board = Board.new(4)
-ship = Ship.new(["A1","A2"])
-ship_2 = Ship.new(["B2","C2","D2"])
-board.place_ship(ship)
-guess = Guess.new(4)
-
-binding.pry

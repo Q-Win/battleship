@@ -30,4 +30,31 @@ class ShipTest < Minitest::Test
     assert_equal [false,false,false,false], ship_2.hits
   end
 
+  def test_we_can_hit_a_ship
+    ship_2 = Ship.new(["A2","B2","C2","D2"])
+
+    ship_2.hit_ship("C2")
+
+    assert ship_2.hits[2]
+    refute ship_2.hits[0]
+    refute ship_2.hits[1]
+    refute ship_2.hits[3]
+  end
+
+  def test_it_can_tell_if_a_ship_has_sank
+    ship = Ship.new(["A2","A3"])
+
+    refute ship.check_if_ship_is_sank?
+
+    ship.hit_ship("A2")
+
+    refute ship.check_if_ship_is_sank?
+
+    ship.hit_ship("A3")
+
+    assert ship.check_if_ship_is_sank?
+  end
+
+
+
 end

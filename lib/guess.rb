@@ -30,4 +30,8 @@ class Guess
 
   end
 
+  def record_hit_or_miss(coordinate, letter)
+    @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = letter
+  end
+
 end
