@@ -1,4 +1,5 @@
 require 'pry'
+require './lib/ship'
 
 class Board
 
@@ -19,6 +20,19 @@ class Board
   end
 
   def print_board
+    "Work In Progress"
+  end
+
+  def place_ship(ship)
+    @ships << ship
+    ship.coordinates.each do |coordinate|
+      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = "S"
+    end
   end
 
 end
+
+
+# board = Board.new(4)
+# ship = Ship.new(["A1","A2"])
+# ship_2 = Ship.new(["A2","B2","C2","D2"])

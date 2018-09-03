@@ -3,6 +3,7 @@ SimpleCov.start
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/board'
+require './lib/ship'
 
 class BoardTest < Minitest::Test
 
@@ -28,4 +29,17 @@ class BoardTest < Minitest::Test
 
       assert_equal [], board_3.ships
     end
+
+    def test_we_can_place_ships_on_board
+      board = Board.new(4)
+      ship = Ship.new(["A1","A2"])
+
+      board.place_ship(ship)
+
+      assert_equal "S", board.board[0][0]
+      assert_equal "S", board.board[0][1]
+      assert_equal " ", board.board[2][2]
+      assert_equal " ", board.board[3][1]
+    end
+
 end
