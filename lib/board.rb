@@ -64,6 +64,50 @@ class Board
     @ships.all? {|ship| ship.check_if_ship_is_sank? == true }
   end
 
+  def validate_guess(coordinate)
+    validate_guess_is_2_chars(coordinate) &&
+    validate_is_a_letter_and_number(coordinate) &&
+    validate_guess_isnt_a_repeat(coordinate)
+  end
+
+  def validate_guess_is_2_chars(coordinate)
+    if coordinate.length != 2
+      p "Invalid guess. Coordinates need to be exactly 2 characters long"
+    end
+
+    coordinate.length == 2
+  end
+
+  def validate_is_a_letter_and_number(coordinate)
+    if coordinate[0].ord.between?(65,68) == false
+      p "Invalid coordinate. Coordinates must start with A,B,C,or D."
+    end
+
+    if coordinate[1].to_i.between?(1,4) == false
+      p "Invalid coordinate. 2nd character must be a 1,2,3,or 4."
+    end
+
+    coordinate[0].ord.between?(65,68) &&
+    coordinate[1].to_i.between?(1,4)
+  end
+
+  def validate_guess_isnt_a_repeat(coordinate)
+    @guess.previous_guesses.none? {|guess| guess == coordinate}
+  end
+
+  def validate_ship_placement(coordinates, length)
+
+  end
+
+  def validate_ship_has_correct_length(coordinates,length)
+    coordinates.length == length
+
+  end
+
+  def get_ships_direction(coordinates)
+    
+  end
+
 
 
 end

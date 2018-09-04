@@ -137,5 +137,60 @@ class BoardTest < Minitest::Test
       assert board.check_if_all_ships_sank?
     end
 
+    def test_we_can_check_if_guess_is_2_chars
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+
+      assert board.validate_guess_is_2_chars("A1")
+      refute board.validate_guess_is_2_chars("A21")
+      refute board.validate_guess_is_2_chars("D")
+    end
+
+    def test_it_can_check_its_a_letter_and_number
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+
+      assert board.validate_is_a_letter_and_number("A1")
+      refute board.validate_is_a_letter_and_number("E1")
+      refute board.validate_is_a_letter_and_number("44")
+      refute board.validate_is_a_letter_and_number("1A")
+      refute board.validate_is_a_letter_and_number("21")
+      refute board.validate_is_a_letter_and_number("AA")
+
+    end
+
+    def test_we_can_check_its_not_a_repeated_guess
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+
+      board.record_guess("A1")
+
+      assert board.validate_guess_isnt_a_repeat("A2")
+      refute board.validate_guess_isnt_a_repeat("A1")
+    end
+
+    def test_we_can_check_if_a_guess_is_valid
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+      
+      board.record_guess("A1")
+
+      assert board.validate_guess("A2")
+      refute board.validate_guess("A21")
+      refute board.validate_guess("D")
+      refute board.validate_guess("E1")
+      refute board.validate_guess("44")
+      refute board.validate_guess("1A")
+      refute board.validate_guess("21")
+      refute board.validate_guess("AA")
+    end
+
+    def test_we_can_check_ship_has_correct_length
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+
+      assert board.validate_ship_has_correct_length(["A1","A2"],2)
+    end
+
 
 end
