@@ -45,6 +45,7 @@ class Board
     @guess.previous_guesses << coordinate
     if @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] == "S"
       p "hit"
+      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = "H"
 
       ship_index = @ships.find_index{|ship| ship.coordinates.any?{ |coord| coord == coordinate} == true}
 
@@ -53,7 +54,7 @@ class Board
       @guess.record_hit_or_miss(coordinate,"H")
     else
       p "miss"
-
+      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = "M"
       @guess.record_hit_or_miss(coordinate,"M")
     end
 
