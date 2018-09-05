@@ -202,5 +202,32 @@ class BoardTest < Minitest::Test
       assert_equal "vertical", board.get_ships_direction(ship_2)
     end
 
+    def test_we_can_check_ships_keep_direction
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+      ship_1 = ["A1","A2","A3"]
+      ship_2 = ["B3","C3","D3"]
+      ship_3 = ["A1","B2","A3"]
+      ship_4 = ["B3","C2","D3"]
+
+      assert board.validate_ship_keeps_direction(ship_1)
+      assert board.validate_ship_keeps_direction(ship_2)
+      refute board.validate_ship_keeps_direction(ship_3)
+      refute board.validate_ship_keeps_direction(ship_4)
+    end
+
+    def test_we_can_check_ships_are_continous
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+      ship_1 = ["A1","A2","A3"]
+      ship_2 = ["B3","C3","D3"]
+      ship_3 = ["A1","A2","A4"]
+      ship_4 = ["A3","C2","D3"]
+
+      assert board.validate_ship_is_continous(ship_1,3)
+      assert board.validate_ship_is_continous(ship_2,3)
+      refute board.validate_ship_is_continous(ship_3,3)
+      refute board.validate_ship_is_continous(ship_4,3)
+    end
 
 end

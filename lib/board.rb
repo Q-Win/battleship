@@ -101,7 +101,6 @@ class Board
 
   def validate_ship_has_correct_length(coordinates,length)
     coordinates.length == length
-
   end
 
   def get_ships_direction(coordinates)
@@ -113,6 +112,37 @@ class Board
     end
   end
 
+  def validate_ship_keeps_direction(coordinates)
+    if get_ships_direction(coordinates) == "horizontal"
+      check = coordinates[0][0]
+      coordinates.all? {|coordinate| coordinate[0] == check}
+    elsif get_ships_direction(coordinates) == "vertical"
+      check = coordinates[0][1]
+      coordinates.all? {|coordinate| coordinate[1] == check}
+    end
+  end
 
+  def validate_ship_is_continous(coordinates,length)
+    if get_ships_direction(coordinates) == "horizontal"
+
+      run_times = (length - 2)
+      checks = []
+
+      for i in 0..run_times do
+
+        checks << (coordinates[i][1].to_i == coordinates[i+1][1].to_i - 1)
+      end
+      checks.all? {|check| check == true}
+
+
+    elsif get_ships_direction(coordinates) == "vertical"
+      run_times = length - 2
+      checks = []
+      for i in 0..run_times do
+        checks << (coordinates[i][0].ord == coordinates[i+1][0].ord - 1)
+      end
+      checks.all? {|check| check == true}
+    end
+  end
 
 end
