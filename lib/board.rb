@@ -105,7 +105,12 @@ class Board
   end
 
   def get_ships_direction(coordinates)
-    
+    if coordinates[0][0] == coordinates[-1][0]
+      "horizontal"
+    elsif
+      coordinates[0][1] == coordinates[-1][1]
+      "vertical"
+    end
   end
 
 

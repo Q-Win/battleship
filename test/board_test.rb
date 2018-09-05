@@ -172,7 +172,7 @@ class BoardTest < Minitest::Test
     def test_we_can_check_if_a_guess_is_valid
       guess = Guess.new(4)
       board = Board.new(4,guess)
-      
+
       board.record_guess("A1")
 
       assert board.validate_guess("A2")
@@ -190,6 +190,16 @@ class BoardTest < Minitest::Test
       board = Board.new(4,guess)
 
       assert board.validate_ship_has_correct_length(["A1","A2"],2)
+    end
+
+    def test_we_can_check_the_ships_direction
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+      ship_1 = ["A1","A2"]
+      ship_2 = ["B3","C3"]
+
+      assert_equal "horizontal",board.get_ships_direction(ship_1)
+      assert_equal "vertical", board.get_ships_direction(ship_2)
     end
 
 
