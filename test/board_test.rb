@@ -210,10 +210,12 @@ class BoardTest < Minitest::Test
       ship_3 = ["A1","B2","A3"]
       ship_4 = ["B3","C2","D3"]
 
+
       assert board.validate_ship_keeps_direction(ship_1)
       assert board.validate_ship_keeps_direction(ship_2)
       refute board.validate_ship_keeps_direction(ship_3)
       refute board.validate_ship_keeps_direction(ship_4)
+      refute board.validate_ship_keeps_direction(["A1","B2"])
     end
 
     def test_we_can_check_ships_are_continous
@@ -229,5 +231,50 @@ class BoardTest < Minitest::Test
       refute board.validate_ship_is_continous(ship_3,3)
       refute board.validate_ship_is_continous(ship_4,3)
     end
+
+    def test_we_can_check_ship_doesnt_overlap
+      guess = Guess.new(4)
+      board = Board.new(4,guess)
+      ship_1 = ["A1","A2","A3","A4"]
+      ship_2 = ["A2","A3","A4"]
+      ship_3 = ["B3","B4","B5"]
+      ship_4 = ["D4","D5"]
+      ship_5 = ["A1","B1","C1","D1"]
+      ship_6 = ["B2","C2","D2"]
+      ship_7 = ["C3","D3","E3"]
+      ship_8 = ["D1","E1"]
+
+
+      assert board.validate_ship_doesnt_overlap(ship_1,4)
+      assert board.validate_ship_doesnt_overlap(ship_2,3)
+      refute board.validate_ship_doesnt_overlap(ship_3,3)
+      refute board.validate_ship_doesnt_overlap(ship_4,3)
+      assert board.validate_ship_doesnt_overlap(ship_5,4)
+      assert board.validate_ship_doesnt_overlap(ship_6,3)
+      refute board.validate_ship_doesnt_overlap(ship_7,3)
+      refute board.validate_ship_doesnt_overlap(ship_8,3)
+    end
+
+  def test_we_can_check_if_a_spot_is_taken_by_a_ship
+    guess = Guess.new(4)
+    board = Board.new(4,guess)
+    ship_1 = Ship.new(["A1","A2","A3","A4"])
+
+    board.place_ship(ship_1)
+
+    assert board.validate_ships_arent_placed_on_existing_ship(["B1","B2"])
+    refute board.validate_ships_arent_placed_on_existing_ship(["A4","B4"])
+  end
+
+  def test_ship_placement_is_valid
+    guess = Guess.new(4)
+    board = Board.new(4,guess)
+    ship_1 = Ship.new(["A1","A2","A3","A4"])
+
+    board.place_ship(ship_1)
+
+    assert board.validate_ship_placement(["B2","B3","B4"],3)
+    refute board.validate_ship_placement(["A1","B2"],2)
+  end
 
 end

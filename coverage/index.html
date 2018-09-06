@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.2/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.2/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-05T08:58:44-06:00">2018-09-05T08:58:44-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-05T19:49:59-06:00">2018-09-05T19:49:59-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.04%</span></span>
+    (<span class="covered_percent"><span class="yellow">80.49%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.58
+         6.83
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>3</b> files in total.
-    <b>115</b> relevant lines. 
-    <span class="green"><b>107</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>123</b> relevant lines. 
+    <span class="green"><b>99</b> lines covered</span> and
+    <span class="red"><b>24</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#4bd7a9a68e0ee278bb8631bfdefae487b111d66f" class="src_link" title="lib/board.rb">lib/board.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>158</td>
-        <td>82</td>
-        <td>82</td>
-        <td>0</td>
-        <td>10.6</td>
+        <td class="yellow strong">86.67 %</td>
+        <td>164</td>
+        <td>90</td>
+        <td>78</td>
+        <td>12</td>
+        <td>6.3</td>
       </tr>
       
       <tr>
@@ -67,17 +67,17 @@
         <td>21</td>
         <td>13</td>
         <td>8</td>
-        <td>23.9</td>
+        <td>12.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#715705124c05ceeb1d2ae64225ea1ca0b5472710" class="src_link" title="lib/ship.rb">lib/ship.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">66.67 %</td>
         <td>22</td>
         <td>12</td>
-        <td>12</td>
-        <td>0</td>
-        <td>6.3</td>
+        <td>8</td>
+        <td>4</td>
+        <td>1.4</td>
       </tr>
       
     </tbody>
@@ -99,11 +99,11 @@
         <div class="source_table" id="4bd7a9a68e0ee278bb8631bfdefae487b111d66f">
   <div class="header">
     <h3>lib/board.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">86.67 %</span> covered</h4>
     <div>
-      <b>82</b> relevant lines. 
-      <span class="green"><b>82</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>90</b> relevant lines. 
+      <span class="green"><b>78</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
   </div>
   
@@ -164,20 +164,20 @@
           <code class="ruby">  def initialize (board_size,guess)</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="10">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="10">
+          <span class="hits">10</span>
           
           <code class="ruby">    @board = build_board(board_size)</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="11">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="11">
+          <span class="hits">10</span>
           
           <code class="ruby">    @ships = []</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="12">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="12">
+          <span class="hits">10</span>
           
           <code class="ruby">    @guess = guess</code>
         </li>
@@ -200,26 +200,26 @@
           <code class="ruby">  def build_board(i)</code>
         </li>
       
-        <li class="covered" data-hits="89" data-linenumber="16">
-          <span class="hits">89</span>
+        <li class="covered" data-hits="46" data-linenumber="16">
+          <span class="hits">46</span>
           
           <code class="ruby">    board_array = Array.new(i){Array.new(i)}</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="17">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="17">
+          <span class="hits">10</span>
           
           <code class="ruby">    board_array.map do |array|</code>
         </li>
       
-        <li class="covered" data-hits="70" data-linenumber="18">
-          <span class="hits">70</span>
+        <li class="covered" data-hits="36" data-linenumber="18">
+          <span class="hits">36</span>
           
           <code class="ruby">      array.map do |spot|</code>
         </li>
       
-        <li class="covered" data-hits="268" data-linenumber="19">
-          <span class="hits">268</span>
+        <li class="covered" data-hits="138" data-linenumber="19">
+          <span class="hits">138</span>
           
           <code class="ruby">        spot = &#39; &#39;</code>
         </li>
@@ -332,20 +332,20 @@
           <code class="ruby">  def place_ship(ship)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="38">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
           
           <code class="ruby">    @ships &lt;&lt; ship</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="39">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="2" data-linenumber="39">
+          <span class="hits">2</span>
           
           <code class="ruby">    ship.coordinates.each do |coordinate|</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="40">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="6" data-linenumber="40">
+          <span class="hits">6</span>
           
           <code class="ruby">      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = &quot;S&quot;</code>
         </li>
@@ -374,26 +374,26 @@
           <code class="ruby">  def record_guess(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="45">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
           
           <code class="ruby">    @guess.previous_guesses &lt;&lt; coordinate</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="46">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] == &quot;S&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="47">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
           
           <code class="ruby">      p &quot;hit&quot;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="48">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = &quot;H&quot;</code>
         </li>
@@ -404,8 +404,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="50">
-          <span class="hits">40</span>
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
           
           <code class="ruby">      ship_index = @ships.find_index{|ship| ship.coordinates.any?{ |coord| coord == coordinate} == true}</code>
         </li>
@@ -416,8 +416,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="52">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
           
           <code class="ruby">      @ships[ship_index].hit_ship(coordinate)</code>
         </li>
@@ -428,8 +428,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="54">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
           
           <code class="ruby">      @guess.record_hit_or_miss(coordinate,&quot;H&quot;)</code>
         </li>
@@ -440,20 +440,20 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="56">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
           <code class="ruby">      p &quot;miss&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="57">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
           
           <code class="ruby">      @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = &quot;M&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="58">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
           <code class="ruby">      @guess.record_hit_or_miss(coordinate,&quot;M&quot;)</code>
         </li>
@@ -488,8 +488,8 @@
           <code class="ruby">  def check_if_all_ships_sank?</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="64">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="64">
+          
           
           <code class="ruby">    @ships.all? {|ship| ship.check_if_ship_is_sank? == true }</code>
         </li>
@@ -518,8 +518,8 @@
           <code class="ruby">    validate_guess_is_2_chars(coordinate) &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="69">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="69">
+          
           
           <code class="ruby">    validate_is_a_letter_and_number(coordinate) &amp;&amp;</code>
         </li>
@@ -548,14 +548,14 @@
           <code class="ruby">  def validate_guess_is_2_chars(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="74">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="3" data-linenumber="74">
+          <span class="hits">3</span>
           
           <code class="ruby">    if coordinate.length != 2</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="75">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="75">
+          <span class="hits">2</span>
           
           <code class="ruby">      p &quot;Invalid guess. Coordinates need to be exactly 2 characters long&quot;</code>
         </li>
@@ -572,8 +572,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="78">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="3" data-linenumber="78">
+          <span class="hits">3</span>
           
           <code class="ruby">    coordinate.length == 2</code>
         </li>
@@ -596,14 +596,14 @@
           <code class="ruby">  def validate_is_a_letter_and_number(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="82">
-          <span class="hits">12</span>
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
           
           <code class="ruby">    if coordinate[0].ord.between?(65,68) == false</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="83">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
           
           <code class="ruby">      p &quot;Invalid coordinate. Coordinates must start with A,B,C,or D.&quot;</code>
         </li>
@@ -620,14 +620,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="86">
-          <span class="hits">12</span>
+        <li class="missed" data-hits="0" data-linenumber="86">
+          
           
           <code class="ruby">    if coordinate[1].to_i.between?(1,4) == false</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="87">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="87">
+          
           
           <code class="ruby">      p &quot;Invalid coordinate. 2nd character must be a 1,2,3,or 4.&quot;</code>
         </li>
@@ -650,8 +650,8 @@
           <code class="ruby">    coordinate[0].ord.between?(65,68) &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="91">
-          <span class="hits">12</span>
+        <li class="missed" data-hits="0" data-linenumber="91">
+          
           
           <code class="ruby">    coordinate[1].to_i.between?(1,4)</code>
         </li>
@@ -674,8 +674,8 @@
           <code class="ruby">  def validate_guess_isnt_a_repeat(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="95">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="95">
+          <span class="hits">4</span>
           
           <code class="ruby">    @guess.previous_guesses.none? {|guess| guess == coordinate}</code>
         </li>
@@ -701,31 +701,31 @@
         <li class="never" data-hits="" data-linenumber="99">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    (validate_ship_has_correct_length(coordinates,length) &amp;&amp;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="100">
+        <li class="covered" data-hits="4" data-linenumber="100">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    validate_ship_keeps_direction(coordinates) &amp;&amp;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="101">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    validate_ship_is_continous(coordinates,length) &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="102">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="102">
           
-          <code class="ruby">  def validate_ship_has_correct_length(coordinates,length)</code>
+          
+          <code class="ruby">    validate_ship_doesnt_overlap(coordinates,length) &amp;&amp;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="103">
           
-          <code class="ruby">    coordinates.length == length</code>
+          
+          <code class="ruby">    validate_ships_arent_placed_on_existing_ship(coordinates))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
@@ -743,181 +743,181 @@
         <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">  def get_ships_direction(coordinates)</code>
+          <code class="ruby">  def validate_ship_has_correct_length(coordinates,length)</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="107">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="4" data-linenumber="107">
+          <span class="hits">4</span>
           
-          <code class="ruby">    if coordinates[0][0] == coordinates[-1][0]</code>
+          <code class="ruby">    coordinates.length == length</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="108">
-          <span class="hits">5</span>
+        <li class="never" data-hits="" data-linenumber="108">
           
-          <code class="ruby">      &quot;horizontal&quot;</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="109">
           
           
-          <code class="ruby">    elsif</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="110">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
           
-          <code class="ruby">      coordinates[0][1] == coordinates[-1][1]</code>
+          <code class="ruby">  def get_ships_direction(coordinates)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="111">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="38" data-linenumber="111">
+          <span class="hits">38</span>
           
-          <code class="ruby">      &quot;vertical&quot;</code>
+          <code class="ruby">    if coordinates[0][0] == coordinates[-1][0]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
+        <li class="covered" data-hits="17" data-linenumber="112">
+          <span class="hits">17</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      &quot;horizontal&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    elsif</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="114">
+        <li class="covered" data-hits="21" data-linenumber="114">
+          <span class="hits">21</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      coordinates[0][1] == coordinates[-1][1]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="17" data-linenumber="115">
+          <span class="hits">17</span>
           
-          <code class="ruby">  def validate_ship_keeps_direction(coordinates)</code>
+          <code class="ruby">      &quot;vertical&quot;</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="116">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    if get_ships_direction(coordinates) == &quot;horizontal&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="117">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      check = coordinates[0][0]</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="118">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      coordinates.all? {|coordinate| coordinate[0] == check}</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="119">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    elsif get_ships_direction(coordinates) == &quot;vertical&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="120">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      check = coordinates[0][1]</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="121">
-          <span class="hits">7</span>
-          
-          <code class="ruby">      coordinates.all? {|coordinate| coordinate[1] == check}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="122">
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="123">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="124">
+        <li class="never" data-hits="" data-linenumber="118">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="125">
+        <li class="covered" data-hits="1" data-linenumber="119">
           <span class="hits">1</span>
           
-          <code class="ruby">  def validate_ship_is_continous(coordinates,length)</code>
+          <code class="ruby">  def validate_ship_keeps_direction(coordinates)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="126">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="9" data-linenumber="120">
+          <span class="hits">9</span>
           
           <code class="ruby">    if get_ships_direction(coordinates) == &quot;horizontal&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="121">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      check = coordinates[0][0]</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="122">
+          <span class="hits">19</span>
+          
+          <code class="ruby">      coordinates.all? {|coordinate| coordinate[0] == check}</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="123">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    elsif get_ships_direction(coordinates) == &quot;vertical&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="124">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      check = coordinates[0][1]</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="125">
+          <span class="hits">7</span>
+          
+          <code class="ruby">      coordinates.all? {|coordinate| coordinate[1] == check}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="127">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="128">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def validate_ship_is_continous(coordinates,length)</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="130">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if get_ships_direction(coordinates) == &quot;horizontal&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="132">
+          <span class="hits">5</span>
           
           <code class="ruby">      run_times = (length - 2)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="129">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="133">
+          <span class="hits">5</span>
           
           <code class="ruby">      checks = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="130">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="131">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      for i in 0..run_times do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="132">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="133">
-          <span class="hits">4</span>
-          
-          <code class="ruby">        checks &lt;&lt; (coordinates[i][1].to_i == coordinates[i+1][1].to_i - 1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="134">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="135">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="5" data-linenumber="135">
+          <span class="hits">5</span>
           
-          <code class="ruby">      checks.all? {|check| check == true}</code>
+          <code class="ruby">      for i in 0..run_times do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="136">
@@ -926,133 +926,169 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="covered" data-hits="10" data-linenumber="137">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        checks &lt;&lt; (coordinates[i][1].to_i == coordinates[i+1][1].to_i - 1)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="138">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    elsif get_ships_direction(coordinates) == &quot;vertical&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="139">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      run_times = length - 2</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="140">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      checks = []</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="141">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      for i in 0..run_times do</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="142">
-          <span class="hits">4</span>
-          
-          <code class="ruby">        checks &lt;&lt; (coordinates[i][0].ord == coordinates[i+1][0].ord - 1)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="143">
+        <li class="never" data-hits="" data-linenumber="138">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="144">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="14" data-linenumber="139">
+          <span class="hits">14</span>
           
           <code class="ruby">      checks.all? {|check| check == true}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="145">
+        <li class="never" data-hits="" data-linenumber="140">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="146">
+        <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="142">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    elsif get_ships_direction(coordinates) == &quot;vertical&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="143">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      run_times = length - 2</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="144">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      checks = []</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="145">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      for i in 0..run_times do</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="146">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        checks &lt;&lt; (coordinates[i][0].ord == coordinates[i+1][0].ord - 1)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="148">
+        <li class="covered" data-hits="5" data-linenumber="148">
+          <span class="hits">5</span>
           
-          
-          <code class="ruby">  # def check_for_continuous(coordinates,length)</code>
+          <code class="ruby">      checks.all? {|check| check == true}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="149">
           
           
-          <code class="ruby">  #   run_times = length - 1</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="150">
           
           
-          <code class="ruby">  #   checks = []</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">  #   for i in 0..run_times do</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="152">
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     checks &lt;&lt; coordinates[i][1] == coordinates[i+1][1]</code>
+          <code class="ruby">  def validate_ship_doesnt_overlap(coordinates,length)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="153">
+        <li class="covered" data-hits="10" data-linenumber="153">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">  #   end</code>
+          <code class="ruby">    if get_ships_direction(coordinates) == &quot;horizontal&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="154">
+        <li class="covered" data-hits="6" data-linenumber="154">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">  #   checks.all? {|check| check == true}</code>
+          <code class="ruby">      (coordinates[0][1].to_i + length) &lt;= 5</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="155">
+        <li class="covered" data-hits="4" data-linenumber="155">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">  #</code>
+          <code class="ruby">    elsif get_ships_direction(coordinates) == &quot;vertical&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="156">
+        <li class="covered" data-hits="4" data-linenumber="156">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">  # end</code>
+          <code class="ruby">      (coordinates[0][0].ord + length) &lt;= 69</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="157">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def validate_ships_arent_placed_on_existing_ship(coordinates)</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="161">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    coordinates.none? {|coordinate| @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] == &quot;S&quot;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">end</code>
@@ -1107,14 +1143,14 @@
           <code class="ruby">  def initialize(i)</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="6">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">    @previous_guesses = []</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="7">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
           
           <code class="ruby">    @board = build_board(i)</code>
         </li>
@@ -1143,26 +1179,26 @@
           <code class="ruby">  def build_board(i)</code>
         </li>
       
-        <li class="covered" data-hits="89" data-linenumber="12">
-          <span class="hits">89</span>
+        <li class="covered" data-hits="46" data-linenumber="12">
+          <span class="hits">46</span>
           
           <code class="ruby">    board_array = Array.new(i){Array.new(i)}</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="13">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="10" data-linenumber="13">
+          <span class="hits">10</span>
           
           <code class="ruby">    board_array.map do |array|</code>
         </li>
       
-        <li class="covered" data-hits="70" data-linenumber="14">
-          <span class="hits">70</span>
+        <li class="covered" data-hits="36" data-linenumber="14">
+          <span class="hits">36</span>
           
           <code class="ruby">      array.map do |spot|</code>
         </li>
       
-        <li class="covered" data-hits="268" data-linenumber="15">
-          <span class="hits">268</span>
+        <li class="covered" data-hits="138" data-linenumber="15">
+          <span class="hits">138</span>
           
           <code class="ruby">        spot = &#39; &#39;</code>
         </li>
@@ -1275,8 +1311,8 @@
           <code class="ruby">  def record_hit_or_miss(coordinate, letter)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="34">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
           <code class="ruby">    @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] = letter</code>
         </li>
@@ -1307,11 +1343,11 @@
         <div class="source_table" id="715705124c05ceeb1d2ae64225ea1ca0b5472710">
   <div class="header">
     <h3>lib/ship.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">66.67 %</span> covered</h4>
     <div>
       <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -1348,20 +1384,20 @@
           <code class="ruby">  def initialize(coordinates)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="6">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">    @coordinates = coordinates</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">    @length = coordinates.length</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="8">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    @hits = Array.new(coordinates.length){false}</code>
         </li>
@@ -1384,14 +1420,14 @@
           <code class="ruby">  def check_if_ship_is_sank?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
           
           <code class="ruby">    hits.all? do |hit|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="13">
-          <span class="hits">10</span>
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">       hit == true</code>
         </li>
@@ -1420,14 +1456,14 @@
           <code class="ruby">  def hit_ship(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="18">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    hit_location = @coordinates.index(coordinate)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="19">
-          <span class="hits">8</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">    @hits[hit_location] = true</code>
         </li>

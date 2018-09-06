@@ -65,6 +65,14 @@ class Board
   end
 
   def validate_guess(coordinate)
+    if validate_guess_is_2_chars(coordinate) == false
+      puts "Coordinates need to be 2 characters long"
+    elsif validate_is_a_letter_and_number(coordinate) == false
+      puts "Coordinates must be a letter followed by a number"
+    elsif validate_guess_isnt_a_repeat(coordinate) == false
+      puts "You have already guessed that spot"
+    end
+
     validate_guess_is_2_chars(coordinate) &&
     validate_is_a_letter_and_number(coordinate) &&
     validate_guess_isnt_a_repeat(coordinate)
@@ -96,7 +104,23 @@ class Board
   end
 
   def validate_ship_placement(coordinates, length)
+    if validate_ship_has_correct_length(coordinates,length) == false
+      puts "Ship is incorrect length"
+    elsif validate_ship_keeps_direction(coordinates) == false
+      puts "Ship is not straight"
+    elsif validate_ship_is_continous(coordinates,length) == false
+      puts "Ship is not continous"
+    elsif validate_ship_doesnt_overlap(coordinates,length) == false
+      puts "Ship can not wrap around board"
+    elsif validate_ships_arent_placed_on_existing_ship(coordinates) == false
+      "Ship already occupying that spot"
+    end
 
+    (validate_ship_has_correct_length(coordinates,length) &&
+    validate_ship_keeps_direction(coordinates) &&
+    validate_ship_is_continous(coordinates,length) &&
+    validate_ship_doesnt_overlap(coordinates,length) &&
+    validate_ships_arent_placed_on_existing_ship(coordinates))
   end
 
   def validate_ship_has_correct_length(coordinates,length)
@@ -143,6 +167,18 @@ class Board
       end
       checks.all? {|check| check == true}
     end
+  end
+
+  def validate_ship_doesnt_overlap(coordinates,length)
+    if get_ships_direction(coordinates) == "horizontal"
+      (coordinates[0][1].to_i + length) <= 5
+    elsif get_ships_direction(coordinates) == "vertical"
+      (coordinates[0][0].ord + length) <= 69
+    end
+  end
+
+  def validate_ships_arent_placed_on_existing_ship(coordinates)
+    coordinates.none? {|coordinate| @board[((coordinate[0].ord) - 65)][(coordinate[1].to_i)-1] == "S"}
   end
 
 end
