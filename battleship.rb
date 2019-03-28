@@ -79,15 +79,17 @@ until (pc_board.validate_guess(player_guess_attempt) == true)
 end
 p "Your attempt is a"
 pc_board.record_guess(player_guess_attempt)
+sleep 1
 p "YOUR CURRENT GUESS ATTEMPTS"
 player_guess.print_board
 p"press enter to continue"
 gets
 p "The PC's attempt is a"
 player_board.record_guess(pc_guesses.pop)
+sleep 1
 p "PC GUESS RECORD"
 player_board.print_board
-
+sleep 1
 end
 
 if pc_board.check_if_all_ships_sank? == true
